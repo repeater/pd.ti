@@ -1,0 +1,179 @@
+body.home.wildcard-handler .home__content,
+body .session .session__container,
+body.home.redeem .home__content {
+  background: url('../images/redeem-trans.png') repeat 0 0;
+  border-radius: 3px;
+  width: 730px;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px;
+  border: 0;
+}
+body {
+  background: #fff;
+}
+body.home.wildcard-handler,
+body.home.session,
+body .session,
+body.home.page,
+body.home.redeem {
+   background: url('../images/session-background.png') no-repeat 0 0;
+   background-position: contain;
+}
+body.home .container,
+body.learn .container,
+body.checkout .container {
+  height: 100vh;
+  background: none;
+  box-shadow: none !important;
+}
+body.learn,
+body.home.page {
+  background: #fff;
+}
+body.home.wildcard-handler .home__content .medium-6,
+body.home.redeem .home__content .medium-6,
+body .session {
+  width: 100%;
+}
+.footer__powered-by,
+.footer__company__info{
+  display: none !important;
+}
+body .session .session__container h2 {
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+}
+footer.footer {
+  margin-top: 26px;
+  background-color: transparent;
+}
+footer.footer .io-row {
+  width: 100%;
+}
+footer.footer .io-footer {
+  width: 48%;
+  display: inline-block;
+}
+footer.footer .footer-left {
+  text-align: left;
+}
+footer.footer .footer-left .io-copyright {
+  color: #fff;
+  font-size: 9px;
+}
+footer.footer .footer-right {
+  text-align: right;
+}
+footer.footer .footer-left a {
+  display: inline-block;
+  height: 50px;
+  width: 226px;
+  background: url('../images/io-footer-logo.png') no-repeat 0 0;
+}
+footer.footer .footer-right a {
+  display: inline-block;
+  height: 50px;
+  width: 236px;
+  background: url('../images/casenex-footer-logo-v2.png') no-repeat 0 0;
+}
+body.learn .container .top-bar {
+  float: none;
+  margin: -6px 0 -12px -18px;
+  height: auto !important;
+}
+body.learn .navigation-bar .top-bar-section ul.left {
+  border-bottom: 0;
+}
+body.learn .navigation-bar .top-bar-section ul li a {
+  font-size: 15px;
+  font-weight: bold;
+}
+.nav--top {
+  font-weight: bold;
+}
+.header--microsite .company__logo {
+  /*width: auto !important;*/
+  background-size: auto !important;
+  margin: -29px 0 0 16px;
+}
+.new-catalog-grid-item {
+  min-height: 360px;
+}
+.featured-content-article-item {
+  min-height: 330px;
+}
+@media only screen and (min-width: 48.063em) {
+  .top-bar {
+    margin-top: 0;
+  }
+}
+
+/* corporate landing page */
+.ember-application.home.index .header--microsite .company__logo {
+  margin-top: 29px;
+}
+.ember-application.home.index .navigation-bar .top-bar-section ul.left {
+  border-bottom: none;
+}
+.ember-application.home.index {
+  background-color: #fff;
+}
+.ember-application.home.index .container {
+  box-shadow: none !important;
+}
+
+/* course description accordions */
+.acc-container {
+  width:90%;
+  margin:30px auto 0 auto;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  -o-border-radius:3px;
+  border-radius:3px;
+  overflow:hidden;
+}
+.acc-btn {
+  width:100%;
+  margin:0 auto;
+  padding:20px 25px;
+  cursor:pointer;
+  background:#efeeee;
+  border-bottom:1px solid #333;
+}
+.acc-content {
+  height:0px;
+  width:100%;
+  margin:0 auto;
+  overflow:hidden;
+  background:#222;
+}
+.acc-content-inner {
+  padding:30px;
+  background-color: #D7D6D6;
+}
+.open {
+  height: auto;
+}
+.acc-container h1,
+.acc-container h2 {
+  color:#656565;
+}
+.acc-container p {
+  color:#798795;
+}
+.selected {
+  color:#1ABC9C;
+}
+
+/* ecommerce worflow */
+.io-widget-ecommerce {
+  border: 1px solid #e9e9e9;
+  border-radius: 5px;
+  margin-bottom: 18px;
+}
+.io-widget-ecommerce h5 {
+  text-transform: uppercase;
+  color: #656565;
+}

@@ -1,0 +1,98 @@
+body {font-family: museo-sans,sans-serif;}
+h1 {font-size: 49px;}
+p {font-size: 31px;}
+a {color: #7026a2;}
+a:hover {color: #581585;}
+.btn-orange {
+	color: #fff;
+    background-color: #ff9c00;
+    border-color: #e38d04;
+		font-size: 32px;
+}
+	.btn-orange:hover {
+		color: #fff;
+    	background-color: #e38d04;
+    	border-color: #e38d04;
+	}
+.btn-purple {
+	color: #fff;
+    background-color: #7026a2;
+    border-color: #581585;
+    /* font-size: 32px; */
+}
+	.btn-purple:hover {
+		color: #fff;
+    	background-color: #581585;
+    	border-color: #581585;
+	}
+.btn-blue {
+	color: #fff;
+    background-color: #00B9E4;
+    border-color: #5a9eef;
+}
+	.btn-blue:hover {
+		color: #fff;
+    	background-color: #5a9eef;
+    	border-color: #5a9eef;
+	}
+.casenexlogo {
+	text-align: right;
+}
+.is-now {
+	text-align: center;
+}
+.iologo {
+	text-align: left;
+}
+@media screen and (min-width: 1024px) {
+header .col-md-6 {
+	display: block;
+	padding: 31px 53px;
+}
+.logos {margin: 75px 0 50px 0;}
+.is-now {
+	padding: 46px 0 0 15px;
+}
+.button {margin-top: 53px;}
+.btn-blue {margin-left: 13px;}
+.pd-button-2 {display: none;}
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-size: 12px;
+	background: #fefefe;
+	margin-right: -15px;
+}
+	footer .gradient {
+		background: linear-gradient(90deg,#00b3e3 0,#373c97 45%,#373c97 55%,#6f3d98);
+		height: 1px;
+	}
+	footer span {
+		display: block;
+		margin:13px 53px;
+	}
+}
+@media screen and (max-width: 1023px) {
+	body {padding-top: 50px;}
+	* {text-align: center !important;}
+	.logos {margin: 0;}
+	.casenexlogo {text-align: center;}
+		.casenexlogo img {width: 75%;}
+	.is-now {text-align: center;}
+	.iologo {text-align: center;}
+		.iologo img {width: 75%;}
+	a.btn {
+		font-size: 150% !important;
+		width: 375px;
+	}
+	.pd-button {display: none;}
+	.pd-button-2 {
+		display: block;
+		margin-top: 23px;
+	}
+	.io-logo {display:none;}
+	h1 {font-size: 24px;}
+	p {font-size: 18px;}
+	footer {margin: 13px 0;}
+}

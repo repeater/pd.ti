@@ -1,0 +1,20 @@
+body {
+  padding-top: 50px;
+  font-family: "museo-sans";
+}
+.course-reg.columns {
+  border-radius: 8px !important;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(153,153,153,1);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(153,153,153,1);
+  box-shadow: 0px 0px 5px 1px rgba(153,153,153,1);
+}
+.course-blend {
+  height: 20px;
+  background: #ffff66; /* Old browsers */
+  background: -moz-linear-gradient(left, #ffff66 0%, #ff6633 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ffff66 0%,#ff6633 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ffff66 0%,#ff6633 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff66', endColorstr='#ff6633',GradientType=1 ); /* IE6-9 */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}

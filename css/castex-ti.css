@@ -1,0 +1,249 @@
+/* CDG IO Overrides */
+body.home.wildcard-handler .container,
+body.home.support .container,
+body.home.page .container {
+  height: 100vh;
+  background: none;
+  box-shadow: none !important;
+}
+body.home.wildcard-handler .container {
+  /*background: url(//d2sg8hyyi0sb93.cloudfront.net/assets/images/footer.png) no-repeat center bottom;*/
+}
+body.learn .container,
+body.home.course-group .container {
+  background: none;
+  box-shadow: none !important;
+}
+body.home.support,
+body.learn,
+body.home.course-group {
+  background: #fff;
+}
+.footer {
+    /*bottom: 0;*/
+    /*position: absolute;*/
+    width: 100%;
+    background: #12a0d0;
+}
+
+/*body.home.wildcard-handler .footer__links,*/
+/*body.home.page .footer__links {*/
+/*  color: #fff;*/
+/*  position: fixed;*/
+/*  top: 14px;*/
+/*  right: 80px;*/
+/*}*/
+/*body.home.page .footer__links {*/
+/*  top: 29px;*/
+/*}*/
+/*body.home.support .footer__links {*/
+/*  display: none;*/
+/*}*/
+.footer__links a {
+  background-image: url(//d2sg8hyyi0sb93.cloudfront.net/assets/images/casenex-support.png);
+  height: 19px;
+  width: 19px;
+}
+body.home.wildcard-handler .nav--top {
+  margin-top: -14px !important;
+  margin-right: 50px;
+}
+body.home.wildcard-handler .nav--top ul a {
+  color: #863b92;
+}
+body.home.wildcard-handler .top-bar,
+body.home.support .top-bar,
+body.home.page .top-bar,
+body.home.course-group .top-bar {
+  display: none;
+}
+body.home.wildcard-handler .company__logo {
+  background-size: auto;
+}
+body.home.wildcard-handler .home__content,
+body .session .session__container {
+  background: url(//d2sg8hyyi0sb93.cloudfront.net/assets/images/redeem-trans.png) repeat 0 0;
+  border-radius: 3px;
+  width: 730px;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px;
+  border: 0;
+}
+/*body.home.page .home__content {*/
+/*  background: url(//d2sg8hyyi0sb93.cloudfront.net/assets/images/redeem-trans.png) repeat 0 0;*/
+/*  border-radius: 3px;*/
+/*}*/
+body.home.session,
+body .session {
+   background: url(//d2sg8hyyi0sb93.cloudfront.net/assets/images/session-background.png) repeat 0 0;
+   background-position: contain;
+}
+body.home.page {
+  /*background: url(//d2sg8hyyi0sb93.cloudfront.net/assets/images/page-home-bg.png) repeat-x 0 0 #fefefe;*/
+  /*background-position: contain;*/
+  background-color: #fefefe;
+}
+body.home.support,
+body.home.course-group {
+  /*background: url(//d2sg8hyyi0sb93.cloudfront.net/assets/images/page-home-bg.png) repeat-x 0 0;*/
+  background-color: #fefefe;
+}
+body.course .header {
+  /*background: url(//d2sg8hyyi0sb93.cloudfront.net/assets/images/page-home-bg.png) repeat 0 0;*/
+  background-color: #fefefe;
+}
+body.home.wildcard-handler .home__content .widget__subtitle {
+  margin-bottom: 0;
+}
+body .session .session__container {
+  margin-top: 76px;
+}
+body .session .session__container h2 {
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+}
+body.home.wildcard-handler .home__content .medium-6,
+body .session {
+  width: 100%;
+}
+body.home.wildcard-handler .home__content .text-centered.already-member {
+  text-align: left;
+}
+body.home.wildcard-handler .home__content .text-centered.already-member .btn--link,
+body .session .session__container .session__forgot .btn--link {
+  color: #863b92;
+}
+body.learn .container .top-bar {
+  float: none;
+  margin: -6px 0 -12px -18px;
+  height: auto !important;
+}
+body.learn .navigation-bar .top-bar-section ul.left {
+  border-bottom: 0;
+}
+body.learn .navigation-bar .top-bar-section ul li a {
+  font-size: 15px;
+  color: #863b92;
+  font-weight: bold;
+}
+body.home.page .container .new-catalog-grid-item {
+  background: #fff;
+  border-radius: 3px;
+}
+/*body.home.page .nav--top,*/
+/*body.home.support .nav--top,*/
+/*body.home.course-group .nav--top {*/
+/*  margin-top: -3px !important;*/
+/*  margin-right: 46px;*/
+/*}*/
+body.home.page .nav--top a,
+body.home.page .nav--top button,
+body.home.support .nav--top a,
+body.home.support .nav--top button,
+body.home.course-group .nav--top a,
+body.home.course-group .nav--top button,
+.dashboard-header__name {
+  color: #863b92;
+  font-weight: bold;
+}
+body.home.page .nav--top a:hover,
+body.home.page .nav--top button:hover,
+body.home.support .nav--top a:hover,
+body.home.support .nav--top button:hover,
+body.home.course-group .nav--top a:hover,
+body.home.course-group .nav--top button:hover,
+.dashboard-header__name:hover {
+  color: #464646;
+  font-weight: bold;
+}
+/*a,*/
+/*button,*/
+/*h4.featured-content-article-item__title {*/
+/*  color: #863b92;*/
+/*}*/
+/*body.home.course-group .btn--primary {*/
+/*  background: #863b92;*/
+/*  color: #fff;*/
+/*}*/
+/*a:hover,*/
+/*button:hover {*/
+/*  color: #464646;*/
+/*  text-decoration: underline;*/
+/*}*/
+.dashboard-access-tab:hover {
+  text-decoration: none !important;
+}
+/*.home__content a,*/
+/*.editor-content a {*/
+/*  text-decoration: underline !important;*/
+/*}*/
+/*.home__content a:hover,*/
+/*.editor-content a:hover {*/
+/*  text-decoration: none !important;*/
+/*}*/
+/*body.home.page .company__logo,*/
+/*body.home.support .company__logo,*/
+/*body.home.course-group  .company__logo {*/
+/*  background: url(//d2sg8hyyi0sb93.cloudfront.net/assets/images/io-logo.png) no-repeat 0 5px !important;*/
+/*  height: 60px;*/
+/*}*/
+/*.header--learner .company__logo,*/
+/*.header--student .company__logo {*/
+/*  margin-top: 10px;*/
+/*  background: url(//d2sg8hyyi0sb93.cloudfront.net/assets/images/io-logo.png) no-repeat 0 5px !important;*/
+/*}*/
+/*.company__logo {*/
+/*  background-size: 71%;*/
+/*  height: 60px;*/
+/*}*/
+/*.header--student .company__logo {*/
+/*  background-size: auto;*/
+/*  height: auto;*/
+/*}*/
+/*h2.widget__title,*/
+/*h1.h2 {*/
+/*  text-align: left;*/
+/*  color: #464646;*/
+/*}*/
+h1.course-title {
+  color: #464646;
+}
+.footer__powered-by {
+  display: none !important;
+}
+
+.company__school-name__divider,
+.company__school-name {
+ display: none !important;
+}
+
+footer.footer {
+  margin-top: 26px;
+}
+footer.footer .io-row {
+  width: 100%;
+}
+footer.footer .io-footer {
+  width: 50%;
+  display: inline-block;
+}
+footer.footer .footer-left {
+  text-align: left;
+}
+footer.footer .footer-right {
+  text-align: right;
+}
+footer.footer .footer-left a {
+  display: inline-block;
+  height: 50px;
+  width: 226px;
+  background: url('//d2sg8hyyi0sb93.cloudfront.net/assets/images/io-footer-logo.png') no-repeat 0 0;
+}
+footer.footer .footer-right a {
+  display: inline-block;
+  height: 50px;
+  width: 236px;
+  background: url('/d2sg8hyyi0sb93.cloudfront.net/assets/images/casenex-footer-logo-v2.png') no-repeat 0 0;
+}
