@@ -8,6 +8,13 @@ body, html {
   font-size: 15px;
   line-height: 1.6;
 } */
+body.home .container,
+body.learn .container,
+body.checkout .container {
+  height: 100vh;
+  background: none;
+  box-shadow: none !important;
+}
 body.ember-application.home.wildcard-handler {
     color: #fff;
     background: #395AAA;
@@ -190,212 +197,9 @@ body .session {
   .ember-application.home.wildcard-handler .header--microsite .company__logo {
     left: 0;
   }
-h1, h2, h3, h4, h5, h6 {
-  color: #666;
-  margin-bottom: .11em;
+body #learner footer.footer {
+  background-color: transparent;
 }
-h1, h2, h3, h4 {
-  text-transform: uppercase;
-}
-h2 {
-  font-size: 2.375rem;
-  font-weight: 600;
-  color: #333;
-}
-h3 {
-  margin-top: 0;
-  margin-bottom: 1em;
-  text-transform: uppercase;
-  font-size: 1.9375rem;
-  font-weight: 400;
-  line-height: 1.2;
-}
-h4 {
-  font-size: 1.5625rem;
-}
-p, ul, ol {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-h6, strong, b {
-  font-weight: 700;
-  color: #333;
-}
-
-.row.first-page-content {
-  margin-top: 300px !important;
-}
-
-
-.cn-feature {
-  margin-bottom: 50px;
-}
-  .cn-feature h6 {
-    position: relative;
-    top: -11px;
-    margin-bottom: 13px;
-  }
-.cn-hero {
-  height: 300px;
-  background: url('../images/cn-hero.jpg') no-repeat center center;
-  background-size: 100% 300px;
-}
-.cn-hero,
-.course-reg {
-  margin-bottom: 50px;
-}
-.course-reg.columns {
-  border-radius: 8px !important;
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(153,153,153,1);
-  -moz-box-shadow: 0px 0px 5px 1px rgba(153,153,153,1);
-  box-shadow: 0px 0px 5px 1px rgba(153,153,153,1);
-}
-.course-blend {
-  height: 10px;
-  background: #ffff66; /* Old browsers */
-  background: -moz-linear-gradient(left, #ffff66 0%, #ff6633 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #ffff66 0%,#ff6633 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #ffff66 0%,#ff6633 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff66', endColorstr='#ff6633',GradientType=1 ); /* IE6-9 */
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-.row.course-catalog {
-  padding: 13px 0;
-}
-.course-button .btn {
-  margin: 13px 13px 0 0;
-}
-.proven-model,
-.research-practice {
-  /* margin-bottom: 125px; */
-}
-.proven-model img,
-.research-practice img {
-  width: 300px;
-}
-.cn-io-logo,
-.cn-cta {
-  margin-bottom: 50px;
-}
-.cn-io-logo {
-  height: 70px;
-  background: url('../images/cn-page-logo.png') no-repeat center center;
-  background-size: 27%;
-}
-.row.client-personas span.cn-icon {
-  display: block;
-  width: 100%;
-  height: 75px;
-  margin-bottom: 13px;
-}
-.row.client-personas span.icon-districts,
-.row.client-personas span.icon-admin,
-.row.client-personas span.icon-teachers,
-.row.client-personas span.icon-students {
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-  .row.client-personas span.icon-districts {
-    background-image: url(/images/icon-district.png);
-  }
-  .row.client-personas span.icon-admin {
-    background-image: url(../images/icon-admin.png);
-  }
-  .row.client-personas span.icon-teachers {
-    background-image: url(../images/icon-teachers.png);
-  }
-  .row.client-personas span.icon-students {
-    background-image: url(../images/icon-students.png);
-  }
-.row.client-personas strong {
-  line-height: 29px;
-}
-.row.client-personas p {
-  margin-top: 15px;
-}
-.cn-footer {
-  background-color: #12a0d0;
-}
-.cn-footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.cn-footer ul li {
-  margin-bottom: 0.5rem;
-}
-.cn-footer a,
-.cn-footer a:hover,
-.cn-footer p {
-  color: #fff;
-}
-.cn-footer h6 {
-  font-size: 1.2rem;
-}
-.cn-footer small {
-  margin-top: 21px;
-  display: block;
-  font-size: .8rem;
-}
-.cn-footer small a {
-  padding-right: 10px;
-}
-.footer-links{
-  margin-top: 70px !important;
-  margin-bottom: 80px !important;
-}
-.cn-social-media li {
-  display: inline-block;
-  font-size: 24px;
-  padding: 0 7px;
-}
-.cn-footer a.footer-badge {
-    background: white;
-    display: inline-block;
-    padding: 12px 1em 7px;
-    border-radius: 8px 8px 0 0;
-    color: #12a0d0;
-    letter-spacing: 0.02em;
-    width: 100%;
-    line-height: 1.2em;
-}
-
-.cn-footer a.footer-badge span {
-    font-weight: 600;
-    display: inline-block;
-    vertical-align: middle;
-    width: calc(100% - 50px);
-}
-
-.cn-footer a.footer-badge i.fa.fa-shield {
-    font-size: 2.6em;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    width: 31px;
-}
-
-/* static page info */
-/* vertical tabs */
-.page-tab ul {
-  margin-left: 0;
-}
-.page-tab .nav li {
-  float: none;
-}
-
-/* accordions */
-.static-page-panel.panel-group .panel {
-  padding: 1rem 0 0 0 !important;
-}
-/* footer */
-footer.footer,
-.footer__inner {
+body #learner footer.footer div.footer__inner div.footer__company__info {
   display: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
 }
