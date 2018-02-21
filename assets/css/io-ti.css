@@ -1,4 +1,10 @@
-body.home.wildcard-handler .home__content,
+@import url(https://use.typekit.net/ozy8jox.css);
+
+body, html {
+  font-family: "museo-sans", Open Sans, sans-serif !important;
+}
+
+/* body.home.wildcard-handler .home__content,
 body .session .session__container,
 body.home.redeem .home__content {
   background: url('../images/redeem-trans.png') repeat 0 0;
@@ -8,18 +14,18 @@ body.home.redeem .home__content {
   margin: 0 auto;
   padding: 30px;
   border: 0;
-}
+} */
 body {
   background: #fff;
 }
-body.home.wildcard-handler,
+/* body.home.wildcard-handler,
 body.home.session,
 body .session,
 body.home.page,
 body.home.redeem {
    background: url('../images/session-background.png') no-repeat 0 0;
    background-position: contain;
-}
+} */
 body.home .container,
 body.learn .container,
 body.checkout .container {
@@ -31,20 +37,12 @@ body.learn,
 body.home.page {
   background: #fff;
 }
-body.home.wildcard-handler .home__content .medium-6,
-body.home.redeem .home__content .medium-6,
-body .session {
-  width: 100%;
-}
+
 .footer__powered-by,
 .footer__company__info{
   display: none !important;
 }
-body .session .session__container h2 {
-  text-align: left;
-  font-weight: 700;
-  font-size: 18px;
-}
+
 footer.footer {
   margin-top: 26px;
   background-color: transparent;

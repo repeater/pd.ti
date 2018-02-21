@@ -3,11 +3,11 @@
 body, html {
   font-family: "museo-sans", Open Sans, sans-serif !important;
 }
-body {
+/* body {
   color: #464646;
   font-size: 15px;
   line-height: 1.6;
-}
+} */
 body.ember-application.home.wildcard-handler {
     color: #fff;
     background: #395AAA;
@@ -36,6 +36,11 @@ body.home.redeem .home__content {
 }
 body.home.wildcard-handler #learner .home__content {
   /* top: 52px; */
+}
+body.home.wildcard-handler .home__content .medium-6,
+body.home.redeem .home__content .medium-6,
+body .session {
+  width: 100%;
 }
 
 body.home.wildcard-handler .home__content .btn--primary,
@@ -90,8 +95,6 @@ input[type=password].input--expand:focus,
   /* margin: 5px 0 1rem 0; */
 }
 
-
-
 body.home.wildcard-handler .home__content .btn--primary:hover,
 body .session .session__container .btn--primary:hover,
 body.home.redeem .home__content .btn--primary:hover,
@@ -119,6 +122,11 @@ body .session .nav--top ul a,
 .field__input-wrapper .field__label,
 .footer__links a {
   color: #fff !important;
+}
+body .session .session__container h2 {
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
 }
 .terms__copy {
   color: #464646;
