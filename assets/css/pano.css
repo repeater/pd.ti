@@ -122,11 +122,12 @@ body .session .session__container h2,
 .home__content h5,
 .home__content .terms__checkbox__wrapper label,
 .home__content .terms__checkbox__wrapper .btn--link,
+.home__content .terms__checkbox__wrapper a,
 body .session .nav--top ul a,
 .session__forgot .btn--link,
-.session__container .field__label,
+.session__container label.field__label,
 .already-member .btn--link,
-.field__input-wrapper .field__label,
+.field__input-wrapper label.field__label,
 .footer__links a {
   color: #fff !important;
 }
@@ -139,9 +140,10 @@ body .session .session__container h2 {
   color: #464646;
 }
 .home__content .terms__checkbox__wrapper .btn--link,
+.home__content .terms__checkbox__wrapper a,
 .session__forgot .btn--link,
 .already-member .btn--link,
-.footer__links a  {
+.footer__links a {
   text-decoration: underline;
   text-transform: capitalize;
   font-weight: 600;
@@ -197,9 +199,31 @@ body .session {
   .ember-application.home.wildcard-handler .header--microsite .company__logo {
     left: 0;
   }
-body #learner footer.footer {
-  background-color: transparent;
 }
-body #learner footer.footer div.footer__inner div.footer__company__info {
+body #learner .footer {
+  background-color: transparent !important;
+  text-align: center;
+}
+body #learner .footer .footer__company__info {
   display: none !important;
 }
+.registration-links {
+  border-bottom:1px solid #fff;
+  margin: -6px 0 26px 0;
+  height: 52px;
+}
+  .registration-info {
+    padding-left: 0;
+  }
+  .registration-assistance {
+    margin-top: 6px;
+    padding-right: 0;
+  }
+    .registration-assistance a {
+      font-size: 13px;
+      font-weight: bold;
+      color: #fff;
+    }
+      .registration-assistance a i {
+        font-size: 16px;
+      }
