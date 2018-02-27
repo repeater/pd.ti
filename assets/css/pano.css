@@ -2,6 +2,7 @@
 
 body, html {
   font-family: "museo-sans", Open Sans, sans-serif !important;
+  background-color: #fff;
 }
 /* body {
   color: #464646;
@@ -11,7 +12,7 @@ body, html {
 body.home .container,
 body.learn .container,
 body.checkout .container {
-  height: 100vh;
+  /* height: 100vh; */
   background: none;
   box-shadow: none !important;
 }
@@ -19,8 +20,7 @@ body.ember-application.home.wildcard-handler {
     color: #fff;
     background: #395AAA;
     background: radial-gradient(circle at top left, #0078b9 5%, #80379b 95%);
-    min-height: 100vh;
-    max-height: 100%;
+    height: auto;
 }
 /* main login box */
 body.home.wildcard-handler .home__content,
@@ -68,16 +68,27 @@ body.home.wildcard-handler #learner .nav--top ul a {
     text-decoration: none;
     min-width: 100px;
 }
-input[type=email]::placeholder,
-input[type=password]::placeholder,
-.field__input[type=text]::placeholder,
-.field__input[type=password]::placeholder {
+body.home.wildcard-handler > .container:first-child {
+  padding-bottom: 80px important;
+}
+body.home.wildcard-handler input[type=email]::placeholder,
+body.home.wildcard-handler input[type=password]::placeholder,
+body.home.wildcard-handler .field__input[type=text]::placeholder,
+body.home.wildcard-handler .field__input[type=password]::placeholder,
+body .session input[type=email]::placeholder,
+body .session input[type=password]::placeholder,
+body .session .field__input[type=text]::placeholder,
+body .session .field__input[type=password]::placeholder {
   color: #fff;
 }
-input[type=email].input--expand,
-input[type=password].input--expand,
-.field__input[type=text],
-.field__input[type=password] {
+body.home.wildcard-handler input[type=email].input--expand,
+body.home.wildcard-handler input[type=password].input--expand,
+body.home.wildcard-handler .field__input[type=text],
+body.home.wildcard-handler .field__input[type=password],
+body .session input[type=email].input--expand,
+body .session input[type=password].input--expand,
+body .session .field__input[type=text],
+body .session .field__input[type=password] {
   font-weight: 300;
   color: #fff !important;
   padding: 12px;
@@ -92,10 +103,14 @@ input[type=password].input--expand,
   outline-color: transparent;
   outline: none;
 }
-input[type=email].input--expand:focus,
-input[type=password].input--expand:focus,
-.field__input[type=text]:focus,
-.field__input[type=password]:focus {
+body.home.wildcard-handler input[type=email].input--expand:focus,
+body.home.wildcard-handler input[type=password].input--expand:focus,
+body.home.wildcard-handler .field__input[type=text]:focus,
+body.home.wildcard-handler .field__input[type=password]:focus,
+body .session input[type=email].input--expand:focus,
+body .session input[type=password].input--expand:focus,
+body .session .field__input[type=text]:focus,
+body .session .field__input[type=password]:focus {
   background: rgba(255, 255, 255, 0.2);
   /* border-top-right-radius: 0;
   border-bottom-right-radius: 0; */
@@ -117,9 +132,9 @@ body.home.wildcard-handler #learner .nav--top ul a {
   font-size: 13px;
   margin-top: 16px !important;
 }
-.home__content h2,
+body.home.wildcard-handler .home__content h2,
 body .session .session__container h2,
-.home__content h5,
+body.home.wildcard-handler .home__content h5,
 .home__content .terms__checkbox__wrapper label,
 .home__content .terms__checkbox__wrapper .btn--link,
 .home__content .terms__checkbox__wrapper a,
@@ -128,8 +143,16 @@ body .session .nav--top ul a,
 .session__container label.field__label,
 .already-member .btn--link,
 .field__input-wrapper label.field__label,
-.footer__links a {
+.footer__links a,
+.receipt-item__text .receipt-item__title,
+.receipt-item__text p {
   color: #fff !important;
+}
+.session__forgot .btn--link {
+  font-weight: normal;
+}
+body.home.wildcard-handler .already-member {
+  font-size: 19px;
 }
 body .session .session__container h2 {
   text-align: left;
@@ -146,7 +169,7 @@ body .session .session__container h2 {
 .footer__links a {
   text-decoration: underline;
   text-transform: capitalize;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 body .session {
     color: #fff;
@@ -221,7 +244,7 @@ body #learner .footer .footer__company__info {
   }
     .registration-assistance a {
       font-size: 13px;
-      font-weight: bold;
+      /* font-weight: bold; */
       color: #fff;
     }
       .registration-assistance a i {
