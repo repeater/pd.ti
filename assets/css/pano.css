@@ -142,7 +142,7 @@ body .session .nav--top ul a,
 .session__forgot .btn--link,
 .session__container label.field__label,
 .already-member .btn--link,
-.field__input-wrapper label.field__label,
+body.home.wildcard-handler .field__input-wrapper label.field__label,
 .footer__links a,
 .receipt-item__text .receipt-item__title,
 .receipt-item__text p {
