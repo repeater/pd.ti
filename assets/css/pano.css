@@ -151,6 +151,7 @@ body.home.wildcard-handler .home__content h5,
 .home__content .terms__checkbox__wrapper a,
 body .session .nav--top ul a,
 .session__forgot .btn--link,
+.session__form p a,
 .session__container label.field__label,
 .session__container .terms__checkbox__wrapper a,
 .session__container .terms__checkbox__wrapper p,
@@ -180,7 +181,8 @@ body .session .session__container h2 {
 .session__container .terms__checkbox__wrapper a,
 .session__forgot .btn--link,
 .already-member .btn--link,
-.footer__links a {
+.footer__links a,
+.session__form p a {
   text-decoration: underline;
   text-transform: capitalize;
   /* font-weight: 600; */
