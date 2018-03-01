@@ -3,6 +3,7 @@
 body, html {
   font-family: "museo-sans", Open Sans, sans-serif !important;
   background-color: #fff;
+  padding-bottom: 32px;
 }
 /* body {
   color: #464646;
@@ -67,6 +68,12 @@ body.home.wildcard-handler #learner .nav--top ul a {
     vertical-align: middle;
     text-decoration: none;
     min-width: 100px;
+}
+.session__container .panel--alt {     /*  Account Page */
+  border: none;
+}
+.session__container .panel {            /*  Account Page */
+  background: none;
 }
 body.home.wildcard-handler > .container:first-child {
   padding-bottom: 80px important;
@@ -134,6 +141,9 @@ body.home.wildcard-handler #learner .nav--top ul a {
 }
 body.home.wildcard-handler .home__content h2,
 body .session .session__container h2,
+.session__container h1.h2,                                /* Account Page */
+.session__container h4,                                /* Account Page */
+.session__container p,                                /* Account Page */
 body.home.wildcard-handler .home__content h5,
 .home__content .terms__checkbox__wrapper label,
 .home__content .terms__checkbox__wrapper .btn--link,
@@ -141,6 +151,8 @@ body.home.wildcard-handler .home__content h5,
 body .session .nav--top ul a,
 .session__forgot .btn--link,
 .session__container label.field__label,
+.session__container .terms__checkbox__wrapper a,
+.session__container .terms__checkbox__wrapper p,
 .already-member .btn--link,
 body.home.wildcard-handler .field__input-wrapper label.field__label,
 .footer__links a,
@@ -164,6 +176,7 @@ body .session .session__container h2 {
 }
 .home__content .terms__checkbox__wrapper .btn--link,
 .home__content .terms__checkbox__wrapper a,
+.session__container .terms__checkbox__wrapper a,
 .session__forgot .btn--link,
 .already-member .btn--link,
 .footer__links a {
