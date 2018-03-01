@@ -22,6 +22,7 @@ body.ember-application.home.wildcard-handler {
     background: #395AAA;
     background: radial-gradient(circle at top left, #0078b9 5%, #80379b 95%);
     height: auto;
+    min-height: 100vh;
 }
 /* main login box */
 body.home.wildcard-handler .home__content,
