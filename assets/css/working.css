@@ -57,16 +57,16 @@ body.home.wildcard-handler #learner .nav--top ul a {
     text-decoration: none;
     min-width: 100px;
 }
-input[type=email]::placeholder,
-input[type=password]::placeholder,
-.field__input[type=text]::placeholder,
-.field__input[type=password]::placeholder {
+body.home.wildcard-handler input[type=email]::placeholder,
+body.home.wildcard-handler input[type=password]::placeholder,
+body.home.wildcard-handler .field__input[type=text]::placeholder,
+body.home.wildcard-handler .field__input[type=password]::placeholder {
   color: #fff;
 }
-input[type=email].input--expand,
-input[type=password].input--expand,
-.field__input[type=text],
-.field__input[type=password] {
+body.home.wildcard-handler input[type=email].input--expand,
+body.home.wildcard-handler input[type=password].input--expand,
+body.home.wildcard-handler .field__input[type=text],
+body.home.wildcard-handler .field__input[type=password] {
   font-weight: 300;
   color: #fff !important;
   padding: 12px;
@@ -109,6 +109,7 @@ body.home.wildcard-handler #learner .nav--top ul a {
   margin-top: 16px !important;
 }
 .home__content h2,
+body.home.wildcard-handler .widget__subtitle h5,
 body .session .session__container h2,
 .home__content .terms__checkbox__wrapper label,
 .home__content .terms__checkbox__wrapper .btn--link,
@@ -120,6 +121,11 @@ body .session .nav--top ul a,
 .footer__links a {
   color: #fff !important;
 }
+body.checkout .field__input-wrapper .field__label,
+body.checkout .field__input .field__input[type=text] {
+  color: #464646 !important;
+}
+
 .terms__copy {
   color: #464646;
 }
