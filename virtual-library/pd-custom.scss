@@ -13,11 +13,15 @@ $blue:            #12a0d0 !important;
 body.tk-museo-sans * {
   font-family: "museo-sans", sans-serif !important;
   font-weight: 200;
-  h1, h2, h3, h4, h5 {
-    font-weight: 700;
-  }
+
   p {
     font-size: 16px;
+  }
+}
+body {
+  h1, h2, h3, h4, h5,
+  h1 b, h2 b, h3 b, h4 b, h5 b {
+    font-weight: 700 !important;
   }
 }
 .site-content h2.category-title,
@@ -180,6 +184,9 @@ p {
 }
 .entry-content td {
   border: solid $white;
+}
+.entry-content ul li {
+  margin-bottom: 0;
 }
 .ui-tabs-panel table:nth-of-type(odd) {
   margin: 0 26px 26px 0;
