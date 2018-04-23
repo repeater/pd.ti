@@ -1,0 +1,8 @@
+// all animation classes go here
+.wow {
+    visibility: hidden;
+}
+.slide-in {
+    animation-duration: 1000ms;
+    @include mui-animation(slide(in, up, 10%), fade);
+}

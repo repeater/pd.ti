@@ -1,0 +1,121 @@
+.page-template-registration-tmpl {
+    padding: 0;
+}
+
+#registration-container {
+    @extend .blue-light-purple-diagonal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: scroll;
+}
+#registration-body {
+    flex: 1;
+    margin: 2rem 0;
+
+    #registration-body-wrapper {
+        align-items: center;
+        height: 100%;
+    }
+
+    #registration-form-container {
+        background-color: rgba($white, 0.1);
+        border-radius: $global-radius;
+        padding: 1rem;
+        margin: 2rem 0 1rem;
+    }
+
+    svg {
+        width: 60%;
+        height: 100%;
+        @include breakpoint (medium) {
+            width: 80%;
+        }
+    }
+
+    h3, h4, h5, h6, a, p {
+        color: $white;
+        margin: 0;
+    }
+    h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.1rem;
+        .icon {
+            position: relative;
+            top: 2px;
+            margin-right: 0.6rem;
+        }
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    h6 {
+        font-size: 0.8rem;
+    }
+
+    .form-callout {
+        padding: 1rem;
+        .columns {
+            &:first-child {
+                padding: 0;
+            }
+        }
+        .icon {
+            font-size: 2rem;
+            color: $white;
+        }
+    }
+    .input-group-label {
+        background: rgba($white, 0.2);
+        border: 0;
+        padding: 0 0.5rem;
+        .icon {
+            color: $white;
+        }
+    }
+    .input-group-field {
+        color: $white;
+        background: rgba($white, 0.2);
+        border: 0;
+        border-radius: 0 $global-radius $global-radius 0;
+        color: $white;
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: rgba($white, 0.6);
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: rgba($white, 0.6);
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+            color: rgba($white, 0.6);
+        }
+    }
+    .button {
+        margin: 2rem 0 1rem;
+        box-shadow: inset 0 0 0 2px $white;
+        padding: 0.8em 1.25em;
+    }
+}
+#registration-footer {
+    ul {
+        list-style: none;
+        margin: 0;
+        li {
+            display: inline-block;
+            margin: 0 .25rem 0.5rem;;
+            font-size: 2rem;
+            a {
+                color: $white;
+            }
+        }
+    }
+    #registration-copyrights {
+        background-color: $light-gray;
+        flex: 0;
+        a {
+            color: $body-font-color;
+        }
+    }
+}

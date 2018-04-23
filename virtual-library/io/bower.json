@@ -1,0 +1,29 @@
+{
+  "name": "syrup-template-theme",
+  "version": "1.0.0",
+  "authors": [
+    "Syrup <syrupmarketing.com>"
+  ],
+  "description": "A theme template for Syrup to develop sites.",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.1",
+    "motion-ui": "^1.2.2",
+    "html5shiv": "~3.7.3",
+    "masonry": "~4.0.0",
+
+    "jquery_lazyload": "jquery.lazyload#~1.9.7",
+    "wow": "wowjs#~1.1.2",
+    "slick-carousel": "~1.5.9",
+    "headroom.js": "~0.7.0"
+  },
+  "private": true
+}

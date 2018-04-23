@@ -1,0 +1,200 @@
+/// Convert angle
+/// @author Chris Eppstein
+/// @param {Number} $value - Value to convert
+/// @param {String} $unit - Unit to convert to
+/// @return {Number} Converted angle
+@function convert-angle($value, $unit) {
+    $convertable-units: deg grad turn rad;
+    $conversion-factors: 1 (10grad/9deg) (1turn/360deg) (3.1415926rad/180deg);
+    @if index($convertable-units, unit($value)) and index($convertable-units, $unit) {
+        @return $value
+                 / nth($conversion-factors, index($convertable-units, unit($value)))
+                 * nth($conversion-factors, index($convertable-units, $unit));
+    }
+
+    @warn "Cannot convert `#{unit($value)}` to `#{$unit}`.";
+}
+
+/// Test if `$value` is an angle
+/// @param {*} $value - Value to test
+/// @return {Bool}
+@function is-direction($value) {
+    $is-direction: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+    $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+
+    @return $is-direction or $is-angle;
+}
+
+/// Convert a direction to legacy syntax
+/// @param {Keyword | Angle} $value - Value to convert
+/// @require {function} is-direction
+/// @require {function} convert-angle
+@function legacy-direction($value) {
+    @if is-direction($value) == false {
+        @warn "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be an angle or a direction";
+    }
+
+    $conversion-map: (
+        to top          : bottom,
+        to top right    : bottom left,
+        to right top    : left bottom,
+        to right        : left,
+        to bottom right : top left,
+        to right bottom : left top,
+        to bottom       : top,
+        to bottom left  : top right,
+        to left bottom  : right top,
+        to left         : right,
+        to left top     : right bottom,
+        to top left     : bottom right
+    );
+
+    @if map-has-key($conversion-map, $value) {
+        @return map-get($conversion-map, $value);
+    }
+
+    @return 90deg - convert-angle($value, 'deg');
+}
+
+/// Mixin printing a linear-gradient
+/// as well as a plain color fallback
+/// and the `-webkit-` prefixed declaration
+/// @access public
+/// @param {String | List | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin linear-gradient($direction, $color-stops...) {
+    @if is-direction($direction) == false {
+        $color-stops: ($direction, $color-stops);
+        $direction: 180deg;
+    }
+
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+}
+
+// reusable gradients
+.test-1 {
+    @include linear-gradient(red, yellow);
+}
+
+.test-2 {
+    @include linear-gradient(to left, DarkOrchid 0%, DarkBlue 45%, DarkBlue 55%, DeepSkyBlue  100%);
+}
+
+.test-3 {
+    @include linear-gradient(to bottom right, DarkOrchid 0%, DarkBlue 30%, DeepSkyBlue  100%);
+}
+
+.test-4 {
+    opacity: 0.5;
+    @include linear-gradient(to top right, red 0%, yellow 20%, yellow 40%, green 100%);
+}
+
+.light-blue-light-purple {
+    @include linear-gradient(to right, $light-blue 0%, $dark-blue 45%, $dark-blue 55%, $light-purple  100%);
+}
+
+.light-blue-light-purple-hover {
+    @include linear-gradient(to right, $light-blue 0%, $dark-blue 30%, $dark-blue 40%, $light-purple  100%);
+}
+
+.hot-pink-light-purple {
+    @include linear-gradient(to right, $hot-pink 0%, $hot-pink 40%, $light-purple  100%);
+}
+
+.light-purple-hot-pink-diagonal {
+    @include linear-gradient(to bottom right, $light-purple 0%, $hot-pink 80%, $hot-pink  100%);
+}
+
+.hot-pink-light-purple-hover {
+    @include linear-gradient(to right, $hot-pink 0%, $hot-pink 20%, $light-purple  100%);
+}
+
+.hot-pink-dark-pink {
+    @include linear-gradient(to right, $hot-pink 0%, $dark-pink  100%);
+}
+
+.light-blue-green {
+    @include linear-gradient(to right, $light-blue 0%, $green  100%);
+}
+.light-blue-green-diagonal {
+    @include linear-gradient(to bottom right, $light-blue 0%, $green  100%);
+}
+.green-light-blue-diagonal {
+    @include linear-gradient(to bottom right, $green 0%, $light-blue  100%);
+}
+.green-light-blue {
+    @include linear-gradient(to right, $green 0%, $light-blue  100%);
+}
+
+.yellow-orange {
+    @include linear-gradient(to right, $yellow 0%, $orange  100%);
+}
+
+.yellow-orange-diagonal {
+    @include linear-gradient(to bottom right, $yellow 0%, $orange 60%, $orange  100%);
+}
+
+.blue-purple-diagonal {
+    @include linear-gradient(to right, #714196 0%, #253f96 50%, #00b2db 100%);
+}
+.dark-blue-dark-purple-diagonal {
+    @include linear-gradient(to bottom right, $dark-blue 0%, $dark-purple 100%);
+}
+
+.light-blue-dark-purple-light-purple {
+    @include linear-gradient(to right, $light-blue 0%, $dark-purple 50%, $light-purple  100%);
+}
+
+.light-blue-dark-blue-light-purple-hot-pink {
+    @include linear-gradient(to right, $light-blue 0%, $dark-blue 40%, $light-purple 70%, $hot-pink  100%);
+}
+
+.light-blue-dark-blue {
+    @include linear-gradient(to right, $light-blue 0%, $dark-blue 100%);
+}
+
+.light-blue-dark-blue-down {
+    @include linear-gradient(to bottom, $light-blue 0%, $dark-blue 100%);
+}
+
+.light-purple-dark-blue-light-blue {
+    @include linear-gradient(to right, $light-purple 0%, $dark-blue 50%, $light-blue  100%);
+}
+.light-purple-dark-blue-light-blue-diagonal {
+    @include linear-gradient(to bottom right, $light-purple 0%, $dark-blue 50%, $light-blue  100%);
+}
+
+.light-blue-dark-blue-light-purple {
+    @include linear-gradient(to right, $light-blue 0%, $dark-blue 70%, $light-purple  100%);
+}
+
+.dark-blue-light-purple {
+    @include linear-gradient(to right, $dark-blue 0%, $light-purple  100%);
+}
+
+.blue-light-purple {
+    @include linear-gradient(to right, $blue 0%, $light-purple  100%);
+}
+
+.blue-light-purple-diagonal {
+    @include linear-gradient(to bottom right, $blue 0%, $light-purple  100%);
+}
+
+.light-purple-light-blue-diagonal {
+    @include linear-gradient(to bottom right, $light-purple 0%, $light-blue 100%);
+}
+
+.light-blue-light-purple-diagonal {
+    @include linear-gradient(to bottom right, $light-blue 0%, $light-purple 100%);
+}
+.casenexpd-diagonal {
+    @include linear-gradient(to bottom right, #00B886 0%, #333333 100%);
+}
+.pals-diagonal {
+    @include linear-gradient(to bottom right, #231F20 0%, #E44145 100%);    
+}
+.pupil-diagonal {
+    @include linear-gradient(to bottom right, #22a2d8 0%, #939598 100%);    
+}

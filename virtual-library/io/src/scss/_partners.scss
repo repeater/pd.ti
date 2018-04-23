@@ -1,0 +1,19 @@
+.partner {
+    background: $light-gray;
+    border-radius: $global-radius;
+    padding: 0.81rem;
+    margin-bottom: 1.62rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    img {
+        display: block;
+        margin: 0 auto 1rem;
+    }
+    h3 {
+        margin: 0 0 0.5rem;
+        color: $body-font-color;
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding-top: 1rem;
+    }
+}

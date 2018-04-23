@@ -1,0 +1,590 @@
+//  Styles that apply to entire site
+.button {
+    font-weight: 500;
+    border-width: 0;
+    @extend .hot-pink-light-purple;
+    &:hover {
+        @extend .hot-pink-light-purple-hover;
+    }
+    &.secondary {
+        @extend .light-blue-light-purple;
+        &:hover {
+            @extend .light-blue-light-purple-hover;
+        }
+    }
+    &.hot-pink-stroke {
+        position: relative;
+        z-index: 0;
+        box-shadow: inset 0 0 0 4px $medium-gray;
+        color: $body-font-color;
+        background: transparent;
+        &:hover {
+            box-shadow: none;
+            @extend .hot-pink-light-purple-hover;
+            color: $white;
+        }
+    }
+    &.green-stroke {
+        position: relative;
+        z-index: 0;
+        box-shadow: inset 0 0 0 4px $medium-gray;
+        color: $body-font-color;
+        background: transparent;
+        &:hover {
+            box-shadow: none;
+            @extend .green-light-blue-diagonal;
+            color: $white;
+        }
+    }
+    &.yellow-stroke {
+        position: relative;
+        z-index: 0;
+        box-shadow: inset 0 0 0 4px $medium-gray;
+        color: $body-font-color;
+        background: transparent;
+        &:hover {
+            box-shadow: none;
+            @extend .yellow-orange-diagonal;
+            color: $white;
+        }
+    }
+    &.blue {
+        background: $light-blue;
+        color: $white !important;
+        &:hover {
+            background: $light-purple;
+            color: $white !important;
+        }
+    }
+    &.white-stroke {
+        position: relative;
+        z-index: 0;
+        box-shadow: inset 0 0 0 4px $white;
+        color: $white;
+        background: transparent;
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+    }
+    &.black-stroke {
+        position: relative;
+        z-index: 0;
+        box-shadow: inset 0 0 0 4px $body-font-color;
+        color: $body-font-color;
+        background: transparent;
+        &:hover {
+            background: $body-font-color;
+            color: $white;
+        }
+    }
+    &.gray-stroke-with-hot-pink-hover-gradient {
+        position: relative;
+        z-index: 0;
+        box-shadow: inset 0 0 0 4px $body-font-color;
+        color: $body-font-color;
+        background: transparent;
+        &:hover {
+            box-shadow: none;
+            @extend .hot-pink-light-purple-hover;
+            color: $white;
+        }
+    }
+    &.white-stroke-with-hot-pink-hover-gradient {
+        position: relative;
+        z-index: 0;
+        box-shadow: inset 0 0 0 4px $white;
+        color: $white;
+        background: transparent;
+        &:hover {
+            box-shadow: none;
+            @extend .hot-pink-light-purple-hover;
+            color: $white;
+        }
+    }
+    &.secondary-stroke {
+        position: relative;
+        z-index: 0;
+        color: $black;
+        &:after {
+            position: absolute;
+            background: $white;
+            z-index: -1;
+            top: 4px;
+            right: 4px;
+            left: 4px;
+            bottom: 4px;
+            display: block;
+            // border-radius: $global-radius;
+            border-radius: 0.12rem;
+            content: '';
+            opacity: 1;
+        }
+        &:hover {
+            color: $white;
+            &:after {
+                opacity: 0;
+            }
+        }
+    }
+}
+h1,h2,h3,h4,h5,h6 {
+    strong {
+        font-weight: normal;
+        color: $true-black;
+    }
+}
+p, span {
+    font-family: "museo-sans", sans-serif;
+    font-weight: 300;
+}
+::selection {
+    background: $dark-purple;
+    color: $white;
+}
+.vertical-pad {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.vertical-pad-top {
+    padding-top: 4rem;
+}
+.page-sub-nav {
+    background: $light-purple;
+    position: relative;
+    z-index: 6;
+    margin-bottom: -3px;
+    @include breakpoint(large up) {
+        margin-top: -6px;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 0;
+        li {
+            display: inline-block;
+            width: 100%;
+            @include breakpoint(medium up) {
+                width: auto;
+            }
+            a {
+                display: block;
+                padding: 0.5rem 1rem;
+                color: $white;
+                font-size: 1rem;
+                @include breakpoint(large up) {
+                    font-size: 1.2rem;
+                    padding: 0.75rem 2rem;
+                }
+            }
+            &.current-menu-item a,
+            a:hover {
+                background: $dark-purple;
+            }
+        }
+    }
+    &#filter-deep {
+        ul {
+            text-align: left;
+            li {
+                width: 100%;
+            }
+        }
+    }
+}
+.arrow {
+    position: relative;
+    &:after {
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        margin-left: -1.25rem;
+        width: 0;
+        height: 0;
+        display: block;
+        content: '';
+        border: 1.5rem solid transparent;
+        border-bottom-color: $light-gray;
+    }
+}
+.number-nav {
+    position: relative;
+    margin-top: 2rem;
+    &:before {
+        position: absolute;
+        top: 2rem;
+        left: 10%;
+        right: 10%;
+        width: 0;
+        background: $light-blue;
+        width: 80%;
+        height: 3px;
+        content: '';
+        display: block;
+        @include breakpoint(medium up) {
+            top: 2.25rem;
+        }
+    }
+    > div {
+        > a {
+            display: block;
+            color: $light-blue;
+            text-align: center;
+            position: relative;
+            padding-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            span {
+                width: 3rem;
+                height: 3rem;
+                display: inline-block;
+                background: $white;
+                text-align: center;
+                line-height: 3rem;
+                font-size: 1.5rem;
+                border-radius: 50%;
+                box-shadow: 0 0 0 3px $light-blue;
+                margin-bottom: 1.5rem;
+            }
+            @include breakpoint(medium only) {
+                font-size: 1rem;
+            }
+            @include breakpoint(medium up) {
+                span {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    line-height: 3.5rem;
+                    font-size: 2rem;
+                }
+            }
+            @include breakpoint(large up) {
+                font-size: 1.5rem
+            }
+            &.active,
+            &:hover {
+                color: $dark-blue;
+                span {
+                    box-shadow: 0 0 0 3px $dark-blue;
+                }
+            }
+            &.active {
+                @extend .arrow;
+                &:after {
+                    bottom: -1.5rem;
+                    border-bottom-color: $dark-blue;
+                }
+            }
+        }
+    }
+    #tab-content {
+        background: $dark-blue;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: $white;
+        position: relative;
+        h4 {
+            color: $white;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        a {
+            color: $white;
+            margin: 0;
+        }
+        &:before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -2000px;
+            right: -2000px;
+            content: '';
+            display: block;
+            background-color: $dark-blue;
+            z-index: -1;
+        }
+    }
+}
+#implementation-tabs {
+    padding-bottom: 4rem;
+    .number-nav {
+        &:before {
+            left:15%;
+            right: 15%;
+            background: $light-blue;
+            width: 70%;
+        }
+        > div {
+            > a {
+                @include breakpoint(small only) {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+}
+.block-tab-nav {
+    > div {
+        padding-left: 0;
+        padding-right: 0;
+        > a {
+            text-align: center;
+            padding: 4rem 2rem;
+            @include breakpoint(large up) {
+                padding: 4rem 0.5rem;
+            }
+            // display: block;
+            position: relative;
+            background-color: $light-blue;
+            display: flex;
+            flex: 1 1 100%;
+            flex-direction: column;
+            justify-content: center;
+            &:before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                content: '';
+                display: block;
+                transition: opacity 200ms;
+                opacity: 0;
+                @extend .light-purple-light-blue-diagonal;
+                z-index: 0;
+            }
+            h3 {
+                display: inline-block;
+                margin-bottom: 0;
+                color: $white;
+                transition: color 200ms;
+                position: relative;
+                z-index: 0;
+                span {
+                    font-size: 3rem;
+                }
+            }
+            &:hover {
+                h3 {
+                    color: $white;
+                }
+                &:before {
+                    opacity: 1;
+                }
+            }
+            &.active {
+                h3 {
+                    color: $white;
+                }
+                &:before {
+                    opacity: 1;
+                }
+                @extend .arrow;
+                &:after {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+    @include breakpoint(small only) {
+        > div:nth-child(1) {
+            border-top: 1px solid $light-gray;
+        }
+        > div:nth-child(2) {
+            border-top: 1px solid $light-gray;
+        }
+        > div:nth-child(3) {
+            border-top: 1px solid $light-gray;
+        }
+        > div:nth-child(4) {
+            border-top: 1px solid $light-gray;
+            border-bottom: 1px solid $light-gray;
+        }
+    }
+    @include breakpoint(medium only) {
+        > div:nth-child(1) {
+            border-top: 1px solid $light-gray;
+            border-right: 1px solid $light-gray;
+        }
+        > div:nth-child(2) {
+            border-top: 1px solid $light-gray;
+        }
+        > div:nth-child(3) {
+            border-bottom: 1px solid $light-gray;
+            border-right: 1px solid $light-gray;
+            border-top: 1px solid $light-gray;
+        }
+        > div:nth-child(4) {
+            border-bottom: 1px solid $light-gray;
+            border-top: 1px solid $light-gray;
+        }
+    }
+    @include breakpoint(large up) {
+        > div:nth-child(1) {
+            border-top: 1px solid $light-gray;
+            border-right: 1px solid $light-gray;
+            border-left: 1px solid $light-gray;
+            border-bottom: 1px solid $light-gray;
+        }
+        > div:nth-child(2) {
+            border-top: 1px solid $light-gray;
+            border-right: 1px solid $light-gray;
+            border-bottom: 1px solid $light-gray;
+        }
+        > div:nth-child(3) {
+            border-top: 1px solid $light-gray;
+            border-right: 1px solid $light-gray;
+            border-bottom: 1px solid $light-gray;
+        }
+        > div:nth-child(4) {
+            border-top: 1px solid $light-gray;
+            border-right: 1px solid $light-gray;
+            border-bottom: 1px solid $light-gray;
+        }
+    }
+    #tab-content {
+        background: $light-gray;
+        position: relative;
+        z-index: 0;
+        padding: 2rem 1rem;
+        @include breakpoint(medium up) {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        &:before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -2000px;
+            right: -2000px;
+            content: '';
+            display: block;
+            background-color: $light-gray;
+            z-index: -1;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+#implementation-points {
+    overflow: hidden;
+}
+textarea {
+    height: 6rem;
+}
+.comment-form {
+    label {
+        font-size: 1rem;
+    }
+    input {
+        height: 3rem;
+    }
+    input, textarea {
+        font-size: 1.2rem;
+    }
+    input[type=submit] {
+        margin-bottom: 1.5rem;
+        height: 3.5rem;
+    }
+}
+.tile {
+    background: $white;
+    background-position: center cener;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1rem 0;
+    padding: 3rem 2rem;
+    @include breakpoint (medium up) {
+        margin: 3rem 0;
+    }
+    position: relative;
+    z-index: 0;
+    h3 {
+        color: $body-font-color;
+        margin: 0;
+        padding: 0;
+    }
+    h3, p {
+        color: $white;
+        position: relative;
+        z-index: 2;
+    }
+    .tile-inner {
+        @include absolute-center;
+        display: block;
+        position: relative;
+        visibility: hidden;
+        width: 100%;
+        &.title-only {
+            position: absolute;
+            visibility: visible;
+        }
+    }
+    &:after {
+        background-color: rgba($blue, 0.78);
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+    &:hover {
+        &:after {
+            background-color: $secondary-color;
+        }
+        h3 {
+            margin: 0 0 2rem;
+        }
+        .tile-inner {
+            visibility: visible;
+            &.title-only {
+                visibility: hidden;
+            }
+        }
+    }
+}
+.video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    background: $true-black;
+    overflow: visible;
+    margin-bottom: 0;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+.video-close {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    text-align: center;
+    z-index: 2;
+    @extend .button;
+    transform: translate(-50%,-50%);
+}
+.inline-button-icon {
+    position: relative;
+    top: 2px;
+    left: -8px;
+}
+.row.full-width {
+    max-width: 100%;
+}
+.slick-slide:focus {
+    outline: none;
+}
+:focus {
+    outline: none;
+}

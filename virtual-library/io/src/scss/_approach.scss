@@ -1,0 +1,140 @@
+#goals {
+    background: $light-blue;
+    color: $white;
+    padding: 2rem 0;
+    h2 {
+        color: $white;
+        strong {
+            color: $white;
+        }
+    }
+    .goal {
+        margin: 2rem auto;
+        width: 80%;
+        display: block;
+        span {
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 3rem;
+            transition: color 200ms;
+            color: $dark-blue;
+            @include breakpoint(medium up) {
+                font-size: 4rem;
+            }
+        }
+        h3 {
+            color: $white;
+            margin-bottom: 0;
+            transition: transform 200ms;
+        }
+        p {
+            line-height: 1.2;
+            transition: transform 200ms;
+            color: $white;
+        }
+        &:hover {
+            span {
+                color: $light-purple;
+            }
+            h3,p {
+                transform: translateY(-0.5rem);
+            }
+        }
+    }
+}
+#approach {
+    overflow: hidden;
+
+    .tab-logo-column {
+        max-width: 25%;
+    }
+    .tab-logo {
+        display: block;
+        margin: 0 auto;
+        svg {
+            max-height: 50px;
+            max-width: 100%;
+        }
+    }
+}
+#learn-more-bullets {
+    padding-bottom: 4rem;
+    .learn-more {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        @include breakpoint(large up) {
+            padding: 4rem 2rem;
+            position: relative;
+        }
+        h3 {
+            color: $true-black;
+            margin-bottom: 0;
+        }
+        ul,p {
+            // margin: 0.5rem 0;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            // line-height: 1.2;
+        }
+    }
+    .learn-more-in {
+        margin-bottom: 0.5rem;
+    }
+    .more-link {
+        @include breakpoint(large up) {
+            background-color: rgba($light-blue,0.85);
+            padding: 1rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 200ms;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .button {
+            margin-bottom: 0;
+            &:hover {
+                color: $white;
+            }
+            @include breakpoint(small only) {
+                @include linear-gradient(to right, $light-blue 0%, $dark-blue 45%, $dark-blue 55%, $light-purple  100%);
+                &:hover {
+                    @include linear-gradient(to right, $light-blue 0%, $dark-blue 30%, $dark-blue 40%, $light-purple  100%);
+                }
+            }
+            @include breakpoint(medium only) {
+                @include linear-gradient(to right, $light-blue 0%, $dark-blue 45%, $dark-blue 55%, $light-purple  100%);
+                &:hover {
+                    @include linear-gradient(to right, $light-blue 0%, $dark-blue 30%, $dark-blue 40%, $light-purple  100%);
+                }
+            }
+            @include breakpoint(large up) {
+                position: relative;
+                z-index: 0;
+                box-shadow: inset 0 0 0 4px $white;
+                color: $white;
+                background: transparent;
+                &:hover {
+                    background: $white;
+                    color: $black;
+                }
+                background: transparent;
+                width: 100%;
+                &:hover {
+                    background: $white;
+                    color: $body-font-color;
+                }
+            }
+        }
+    }
+}
+.tab-approach-icon {
+    font-size: 3rem;
+}

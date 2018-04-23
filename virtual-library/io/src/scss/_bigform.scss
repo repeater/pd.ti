@@ -1,0 +1,27 @@
+.gray-back {
+    background: $light-gray;
+}
+.big-form {
+    label {
+        text-align: left;
+        font-size: 1rem;
+    }
+    input,textarea {
+        font-size: 1.2rem;
+        border-color: transparent;
+        margin-bottom: 1.5rem;
+    }
+    input:not(.button) {
+        height: 3rem;
+    }
+    select {
+        border-color: transparent;
+        transition: box-shadow .5s,border-color .25s ease-in-out;
+    }
+    textarea:focus,
+    select:focus {
+        border-color: $primary-color !important;
+        outline: none;
+        box-shadow: inset 0 0 2px $primary-color;
+    }
+}

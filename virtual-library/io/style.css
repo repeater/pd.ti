@@ -1,0 +1,135 @@
+/*
+Theme Name: IO
+Author: IO Education
+Version: 1.0
+*/
+
+
+.stripe.blog-color-default {
+    display: none;
+}
+
+/* Navigation Overrides */
+
+body {
+    padding-top: 0;
+}
+
+#header{
+	border: 0;
+	box-shadow: 0 8px 18px -12px rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 5px -5px rgba(0, 0, 0, 0.1);
+	transition: 0.2s ease all;
+}
+
+@media screen and (min-width: 64em){
+	#header{
+    height: 78px;
+	}
+}
+
+#header.headroom--top {
+    top: 30px;
+	transition: 0.2s ease all;
+}
+
+/* Main Menu */
+
+
+
+#header ul li.current-page-ancestor:not(:last-child) a{
+	background: rgb(254, 254, 254);
+    color: rgb(128, 55, 155);
+}
+
+#header ul li.current-menu-item:not(:last-child) a {
+    background: rgb(254, 254, 254);
+    color: rgb(128, 55, 155);
+}
+
+/* Utility Menu */
+
+#utility {
+    margin-bottom: 78px;
+    height: 30px;
+    background: #eeeeee;
+    padding: 0 2rem;
+}
+
+.utility-navigation ul {
+    margin: 0;
+	list-style: none;
+	float: right;
+}
+
+.utility-navigation ul li {
+    list-style: none;
+    display: inline;
+    padding: 5px;
+}
+
+.utility-navigation ul li a {
+    font-size: .9em;
+    padding: 4px 0;
+    display: inline-block;
+    color: #666;
+}
+
+.utility-search {
+    float: right;
+}
+
+.utility-search a.button.btn-search{
+    padding: 6px;
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+    background: none;
+}
+
+
+#searchform .search-form {
+	position: absolute;
+	right: 20px;
+	top: 1px;
+}
+
+#searchform .search-field {
+	background-color: transparent;
+	background-image: url(/wp-content/uploads/search-icon.png);
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    border: 0;
+    cursor: pointer;
+    height: 30px;
+    padding: 0 0 0 34px;
+    position: relative;
+    -webkit-transition: width 400ms ease, background 400ms ease;
+    transition: width 400ms ease, background 400ms ease;
+    width: 0;
+	margin:0;
+    border-radius: 0;
+}
+
+#searchform .search-field:focus {
+	background-color: #fff;
+	border: 0px solid black;
+	cursor: text;
+	outline: 0;
+	border:0;
+	width: 230px;
+	box-shadow:inset 0 0 2px #cccccc;
+}
+
+#searchform .search-submit {
+  display: none;
+}
+
+#searchform input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+
+#filters{
+    background: linear-gradient(45deg,#80379b 0,#00b9e4 200%);
+}

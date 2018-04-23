@@ -1,0 +1,36 @@
+#features {
+    padding: 4rem 0;
+    h2 {
+        margin-bottom: 3rem;
+    }
+    p {
+        margin-bottom: 4rem;
+    }
+    ul {
+        list-style: none;
+        margin: 0 0 4rem;
+        padding: 0;
+        li {
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 3rem;
+                height: 3.3rem;
+                text-align: left;
+                content: 'c';
+                display: block;
+                color: $green;
+                font-family: 'icomoon';
+                line-height: 1;
+                content: "\e903";
+                font-size: 0.8em;
+                margin-top: 0.1em;
+            }
+        }
+    }
+}
