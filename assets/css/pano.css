@@ -2,33 +2,23 @@
 
 body, html {
   font-family: "museo-sans", Open Sans, sans-serif !important;
-  background-color: #fff;
-  padding-bottom: 32px;
 }
-/* body {
+body {
   color: #464646;
   font-size: 15px;
   line-height: 1.6;
-} */
-body.home .container,
-body.learn .container,
-body.checkout .container {
-  /* height: 100vh; */
-  background: none;
-  box-shadow: none !important;
 }
 body.ember-application.home.wildcard-handler,
 body.home.redeem {
     color: #fff;
     background: #395AAA;
     background: radial-gradient(circle at top left, #0078b9 5%, #80379b 95%);
-    height: auto;
     min-height: 100vh;
+    max-height: 100%;
 }
 /* main login box */
 body.home.wildcard-handler .home__content,
 body .session .session__container,
-body.home.redeem .home__content,
 body.home.redeem .home__content {
   background: none;
   background-color: rgba(255, 255, 255, 0.1);
@@ -48,18 +38,12 @@ body.home.redeem .home__content {
 body.home.wildcard-handler #learner .home__content {
   /* top: 52px; */
 }
-body.home.wildcard-handler .home__content .medium-6,
-body.home.redeem .home__content .medium-6,
-body .session {
-  width: 100%;
-}
 
 body.home.wildcard-handler .home__content .btn--primary,
 body .session .session__container .btn--primary,
 body.home.redeem .home__content .btn--primary,
 body .session .nav--top ul a,
-body.home.wildcard-handler #learner .nav--top ul a,
-body.home.redeem .nav--top ul a {
+body.home.wildcard-handler #learner .nav--top ul a {
     /* font-family: "museo-sans", "Museo Sans", "Helvetica Neue", "Arial", sans-serif; */
     padding: 12px 15px;
     font-size: 14px;
@@ -73,45 +57,16 @@ body.home.redeem .nav--top ul a {
     text-decoration: none;
     min-width: 100px;
 }
-.session__container .panel--alt {     /*  Account Page */
-  border: none;
-}
-.session__container .panel {            /*  Account Page */
-  background: none;
-}
-body.home.wildcard-handler > .container:first-child {
-  padding-bottom: 80px important;
-}
 body.home.wildcard-handler input[type=email]::placeholder,
 body.home.wildcard-handler input[type=password]::placeholder,
 body.home.wildcard-handler .field__input[type=text]::placeholder,
-body.home.wildcard-handler .field__input[type=password]::placeholder,
-body.home.redeem .field__input[type=text]::placeholder,
-body .session input[type=email]::placeholder,
-body .session input[type=password]::placeholder,
-body .session .field__input[type=text]::placeholder,
-body .session .field__input[type=password]::placeholder {
+body.home.wildcard-handler .field__input[type=password]::placeholder {
   color: #fff;
-}
-body.home.wildcard-handler .field label.field__label,
-body.home.redeem .field label.field__label,
-body .session .field label.field__label {
-  color: #fff;
-}
-body.home.wildcard-handler .field--active label.field__label,
-body.home.redeem .field--active label.field__label,
-body .session .field--active label.field__label {
-  color: none;
 }
 body.home.wildcard-handler input[type=email].input--expand,
 body.home.wildcard-handler input[type=password].input--expand,
 body.home.wildcard-handler .field__input[type=text],
-body.home.wildcard-handler .field__input[type=password],
-body.home.redeem .field__input[type=text],
-body .session input[type=email].input--expand,
-body .session input[type=password].input--expand,
-body .session .field__input[type=text],
-body .session .field__input[type=password] {
+body.home.wildcard-handler .field__input[type=password] {
   font-weight: 300;
   /* color: #fff !important; */
   padding: 12px;
@@ -119,26 +74,24 @@ body .session .field__input[type=password] {
   border: none;
   /* margin: 5px 0; */
   background: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.9);
+  /* color: rgba(255, 255, 255, 0.9); */
   border-radius: 4px;
   cursor: inherit;
   z-index: 5;
   outline-color: transparent;
   outline: none;
 }
-body.home.wildcard-handler input[type=email].input--expand:focus,
-body.home.wildcard-handler input[type=password].input--expand:focus,
-body.home.wildcard-handler .field__input[type=text]:focus,
-body.home.wildcard-handler .field__input[type=password]:focus,
-body .session input[type=email].input--expand:focus,
-body .session input[type=password].input--expand:focus,
-body .session .field__input[type=text]:focus,
-body .session .field__input[type=password]:focus {
+input[type=email].input--expand:focus,
+input[type=password].input--expand:focus,
+.field__input[type=text]:focus,
+.field__input[type=password]:focus {
   background: rgba(255, 255, 255, 0.2);
   /* border-top-right-radius: 0;
   border-bottom-right-radius: 0; */
   /* margin: 5px 0 1rem 0; */
 }
+
+
 
 body.home.wildcard-handler .home__content .btn--primary:hover,
 body .session .session__container .btn--primary:hover,
@@ -155,53 +108,38 @@ body.home.wildcard-handler #learner .nav--top ul a {
   font-size: 13px;
   margin-top: 16px !important;
 }
-body.home.wildcard-handler .home__content h2,
+.home__content h2,
+body.home.wildcard-handler .widget__subtitle h5,
+body.home.redeem .widget__subtitle h5,
 body .session .session__container h2,
-.session__container h1.h2,                                /* Account Page */
-.session__container h4,                                /* Account Page */
-.session__container p,                                /* Account Page */
-body.home.wildcard-handler .home__content h5,
 .home__content .terms__checkbox__wrapper label,
 .home__content .terms__checkbox__wrapper .btn--link,
-.home__content .terms__checkbox__wrapper a,
 body .session .nav--top ul a,
 .session__forgot .btn--link,
-.session__form p a,
-.session__container label.field__label,
-.session__container .terms__checkbox__wrapper a,
-.session__container .terms__checkbox__wrapper p,
+/* .session__container .field__label, */
 .already-member .btn--link,
-body.home.wildcard-handler .field__input-wrapper label.field__label,
-.footer__links a,
-.receipt-item__text .receipt-item__title,
-.receipt-item__text p,
-body.home.redeem h5 {
+/* .field__input-wrapper .field__label, */
+.footer__links a {
   color: #fff !important;
 }
-.session__forgot .btn--link {
-  font-weight: normal;
+.field__input-wrapper {
+  background: #fff;
 }
-body.home.wildcard-handler .already-member {
-  font-size: 19px;
+body.checkout .field__input-wrapper .field__label,
+body.checkout .field__input .field__input[type=text] {
+  color: #464646 !important;
 }
-body .session .session__container h2 {
-  text-align: left;
-  font-weight: 700;
-  font-size: 18px;
-}
+
 .terms__copy {
   color: #464646;
 }
 .home__content .terms__checkbox__wrapper .btn--link,
-.home__content .terms__checkbox__wrapper a,
-.session__container .terms__checkbox__wrapper a,
 .session__forgot .btn--link,
 .already-member .btn--link,
-.footer__links a,
-.session__form p a {
+.footer__links a  {
   text-decoration: underline;
   text-transform: capitalize;
-  /* font-weight: 600; */
+  font-weight: 600;
 }
 body .session {
     color: #fff;
@@ -226,8 +164,7 @@ body .session {
   background: none;
 }
 .ember-application.home.wildcard-handler .header--microsite .company__logo,
-.company__logo.company__logo--no-background,
-.ember-application.home.redeem .header--microsite .company__logo {
+.company__logo.company__logo--no-background {
   background: url(../images/casenex-header-white.png) no-repeat center center !important;
   background-size: auto !important;
   margin: 0 auto;
@@ -237,8 +174,7 @@ body .session {
   width: 300px;
 }
 /* register logo */
-.ember-application.home.wildcard-handler .header--microsite .company__logo,
-.ember-application.home.redeem .header--microsite .company__logo {
+.ember-application.home.wildcard-handler .header--microsite .company__logo {
   position: relative;
   margin: 25px auto 31px auto;
   left: 53px;
@@ -256,31 +192,215 @@ body .session {
   .ember-application.home.wildcard-handler .header--microsite .company__logo {
     left: 0;
   }
+h1, h2, h3, h4, h5, h6 {
+  color: #666;
+  margin-bottom: .11em;
 }
-body #learner .footer {
-  background-color: transparent !important;
-  text-align: center;
+h1, h2, h3, h4 {
+  text-transform: uppercase;
 }
-body #learner .footer .footer__company__info {
+h2 {
+  font-size: 2.375rem;
+  font-weight: 600;
+  color: #333;
+}
+h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-size: 1.9375rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+h4 {
+  font-size: 1.5625rem;
+}
+p, ul, ol {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+h6, strong, b {
+  font-weight: 700;
+  color: #333;
+}
+
+.row.first-page-content {
+  margin-top: 300px !important;
+}
+
+
+.cn-feature {
+  margin-bottom: 50px;
+}
+  .cn-feature h6 {
+    position: relative;
+    top: -11px;
+    margin-bottom: 13px;
+  }
+.cn-hero {
+  height: 300px;
+  background: url('../images/cn-hero.jpg') no-repeat center center;
+  background-size: 100% 300px;
+}
+.cn-hero,
+.course-reg {
+  margin-bottom: 50px;
+}
+.course-reg.columns {
+  border-radius: 8px !important;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(153,153,153,1);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(153,153,153,1);
+  box-shadow: 0px 0px 5px 1px rgba(153,153,153,1);
+}
+.course-blend {
+  height: 10px;
+  background: #ffff66; /* Old browsers */
+  background: -moz-linear-gradient(left, #ffff66 0%, #ff6633 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ffff66 0%,#ff6633 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ffff66 0%,#ff6633 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff66', endColorstr='#ff6633',GradientType=1 ); /* IE6-9 */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.row.course-catalog {
+  padding: 13px 0;
+}
+.course-button .btn {
+  margin: 13px 13px 0 0;
+}
+.proven-model,
+.research-practice {
+  /* margin-bottom: 125px; */
+}
+.proven-model img,
+.research-practice img {
+  width: 300px;
+}
+.cn-io-logo,
+.cn-cta {
+  margin-bottom: 50px;
+}
+.cn-io-logo {
+  height: 70px;
+  background: url('../images/cn-page-logo.png') no-repeat center center;
+  background-size: 27%;
+}
+.row.client-personas span.cn-icon {
+  display: block;
+  width: 100%;
+  height: 75px;
+  margin-bottom: 13px;
+}
+.row.client-personas span.icon-districts,
+.row.client-personas span.icon-admin,
+.row.client-personas span.icon-teachers,
+.row.client-personas span.icon-students {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+  .row.client-personas span.icon-districts {
+    background-image: url(/images/icon-district.png);
+  }
+  .row.client-personas span.icon-admin {
+    background-image: url(../images/icon-admin.png);
+  }
+  .row.client-personas span.icon-teachers {
+    background-image: url(../images/icon-teachers.png);
+  }
+  .row.client-personas span.icon-students {
+    background-image: url(../images/icon-students.png);
+  }
+.row.client-personas strong {
+  line-height: 29px;
+}
+.row.client-personas p {
+  margin-top: 15px;
+}
+.cn-footer {
+  background-color: #12a0d0;
+}
+.cn-footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.cn-footer ul li {
+  margin-bottom: 0.5rem;
+}
+.cn-footer a,
+.cn-footer a:hover,
+.cn-footer p {
+  color: #fff;
+}
+.cn-footer h6 {
+  font-size: 1.2rem;
+}
+.cn-footer small {
+  margin-top: 21px;
+  display: block;
+  font-size: .8rem;
+}
+.cn-footer small a {
+  padding-right: 10px;
+}
+.footer-links{
+  margin-top: 70px !important;
+  margin-bottom: 80px !important;
+}
+.cn-social-media li {
+  display: inline-block;
+  font-size: 24px;
+  padding: 0 7px;
+}
+.cn-footer a.footer-badge {
+    background: white;
+    display: inline-block;
+    padding: 12px 1em 7px;
+    border-radius: 8px 8px 0 0;
+    color: #12a0d0;
+    letter-spacing: 0.02em;
+    width: 100%;
+    line-height: 1.2em;
+}
+
+.cn-footer a.footer-badge span {
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 50px);
+}
+
+.cn-footer a.footer-badge i.fa.fa-shield {
+    font-size: 2.6em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 31px;
+}
+
+/* static page info */
+/* vertical tabs */
+.page-tab ul {
+  margin-left: 0;
+}
+.page-tab .nav li {
+  float: none;
+}
+
+/* accordions */
+.static-page-panel.panel-group .panel {
+  padding: 1rem 0 0 0 !important;
+}
+/* footer */
+body footer {
   display: none !important;
 }
-.registration-links {
-  border-bottom:1px solid #fff;
-  margin: -6px 0 26px 0;
-  height: 52px;
+.widget--redemption-form .medium-6 {
+  width: 100% !important;
 }
-  .registration-info {
-    padding-left: 0;
-  }
-  .registration-assistance {
-    margin-top: 6px;
-    padding-right: 0;
-  }
-    .registration-assistance a {
-      font-size: 13px;
-      /* font-weight: bold; */
-      color: #fff;
-    }
-      .registration-assistance a i {
-        font-size: 16px;
-      }
+.ember-view.field label.field__label {
+  color: #656565 !important;
+}
