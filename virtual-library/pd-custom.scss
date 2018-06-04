@@ -186,7 +186,7 @@ p {
   border: solid $white;
 }
 .entry-content ul li {
-  margin-bottom: 0;
+  // margin-bottom: 0;
   // list-style: circle;
 }
 .ui-tabs-panel table:nth-of-type(odd) {
@@ -215,6 +215,7 @@ p {
   background-color: $white;
   padding-right: 52px;
 }
+
 @media screen and (min-width: 10em) {
   .site-content .bnt-container {
       background-color: $white;
